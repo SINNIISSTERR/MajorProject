@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseGuru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select, button {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CourseGuru</h1>
+    </header>
+    <main>
+        <form id="recommendationForm">
+            <label for="interests">Select Your Interests:</label>
+            <select id="interests" multiple>
+                <option value="programming">Programming</option>
+                <option value="design">Design</option>
+                <option value="math">Mathematics</option>
+ 		<option value="math">Sociology</option>
+ 		<option value="math">Health</option>
+ 		<option value="math">Engineering</option>
+                <!-- Add more interests as needed -->
+            </select>
+
+            <label for="level">Select Your Level:</label>
+            <select id="level">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <button type="button" onclick="recommendCourses()">Get Recommendations</button>
+        </form>
+
+        <div id="recommendations">
+            <!-- Recommendations will be displayed here -->
+        </div>
+    </main>
+
+    <script>
+        function recommendCourses() {
+            // Add logic to fetch and display course recommendations based on user input
+            // For now, let's just display a message
+            var recommendationsDiv = document.getElementById("recommendations");
+            recommendationsDiv.innerHTML = "<p>Here are your recommended courses!</p>";
+        }
+    </script>
+</body>
+</html>
